@@ -29,15 +29,18 @@ public class PersonController {
     @GetMapping("/persons/byCity")
     public List<Persons> getPersonsByCity (@RequestParam String city){
         return jpaPersonRepository.getPersonsByCityOfLiving(city);
+        //return jpaPersonRepository.getPersonsByCityOfLiving(city);
     }
 
     @GetMapping("/persons/byAgeSort")
     public List<Persons> getPersonsByAgeSort (@RequestParam String age){
-        return jpaPersonRepository.findByRelationShipIdAgeLessThan(Integer.parseInt(age), Sort.by("relationShipId.age"));
+        return jpaPersonRepository.findByRelationShipIdAgeLessThan(Integer.parseInt(age));
+        //return jpaPersonRepository.findByRelationShipIdAgeLessThan(Integer.parseInt(age), Sort.by("relationShipId.age"));
     }
 
     @GetMapping("/persons/byNameAndSurname")
     public Optional<Persons> getPersonsByAgeSort (@RequestParam String name, @RequestParam String surname){
         return jpaPersonRepository.findByRelationShipIdNameAndRelationShipIdSurname(name, surname);
+        //return jpaPersonRepository.findByRelationShipIdNameAndRelationShipIdSurname(name, surname);
     }
 }
