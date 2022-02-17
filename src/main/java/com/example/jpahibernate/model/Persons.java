@@ -13,15 +13,11 @@ import java.io.Serializable;
 //@AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Persons implements Serializable {
+public class Persons{
     @Column(columnDefinition = "serial")
     private Integer id;
-    @Id
-    private String name;
-    @Id
-    private String surname;
-    @Id
-    private Integer age;
+    @EmbeddedId
+    private RelationShipId relationShipId;;
     private String phoneNumber;
     @Column(nullable = false)
     private String cityOfLiving;
