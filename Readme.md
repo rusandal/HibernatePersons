@@ -10,7 +10,9 @@ RestController предоставляющий возможность получ�
 docker run -v /mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mysql -p 3306:3306  mysql
 ```
 2. Изменить адрес БД в application.properties на внешний порт контейнера с MySql.
-```spring.datasource.url=jdbc:mysql://192.168.99.100:3306/person```
+```
+spring.datasource.url=jdbc:mysql://192.168.99.100:3306/person
+```
 3. Запустить Docker image.
 
 ### Создание таблиц БД и наполнение (Liquebase)
