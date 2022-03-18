@@ -13,7 +13,7 @@ docker run -v /mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mysql -p 3306:33
 ```
 spring.datasource.url=jdbc:mysql://192.168.99.100:3306/person
 ```
-3. Запустить Docker image.
+
 
 ### Создание таблиц БД и наполнение (Liquebase)
 Для создания и наполнения используется liquebase framework. Мастер changelog (db.changelog-master.yaml) имеет 3 записи. 
