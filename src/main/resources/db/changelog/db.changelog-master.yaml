@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/migrations/001-sample.xml
+  - include:
+      file: db/changelog/migrations/002-modify.xml
+  - include:
+      file: db/changelog/migrations/R__insert_data.xml

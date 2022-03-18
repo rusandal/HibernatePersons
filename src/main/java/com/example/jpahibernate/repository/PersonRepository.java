@@ -1,6 +1,7 @@
 package com.example.jpahibernate.repository;
 
 import com.example.jpahibernate.model.Persons;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
@@ -11,7 +12,7 @@ import javax.persistence.Query;
 import java.util.List;
 
 @Repository
-public class PersonRepository {
+public class PersonRepository{
     @PersistenceContext
     EntityManager entityManager;
 
