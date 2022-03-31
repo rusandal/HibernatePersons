@@ -1,7 +1,8 @@
-## Rest контроллер взаимодействия с БД (Hibernate)
+## Rest контроллер (+Spring Security) взаимодействия с БД (Hibernate)
 
 ### Описание
-RestController предоставляющий возможность получать данные из БД, предварительно созданной с помощью миграции Liquebase.
+RestController предоставляющий возможность получать данные из БД, предварительно созданной с помощью миграции Liquibase.  
+Доступ к методам контроллера ограничен Spring Security (@RolesAllowed, @Secured, @PreAuthorize).
 
 ### Предварительная настройка
 Для функционирования программы необходимо:
@@ -15,8 +16,8 @@ spring.datasource.url=jdbc:mysql://192.168.99.100:3306/person
 ```
 
 
-### Создание таблиц БД и наполнение (Liquebase)
-Для создания и наполнения используется liquebase framework. Мастер changelog (db.changelog-master.yaml) имеет 3 записи. 
+### Создание таблиц БД и наполнение (Liquibase)
+Для создания и наполнения используется liquibase framework. Мастер changelog (db.changelog-master.yaml) имеет 3 записи. 
 1. Создание таблицы
 2. Модификация таблицы
 3. Наполнение таблицы данными
@@ -51,4 +52,4 @@ public class RelationShipId implements Serializable {
 4. Отсортированный по имени и фамилии (... extends JpaRepository<Persons, RelationShipId>)
 
 ### Используемые технологии
-Spring Boot Web, Jpa/Hibernate, Docker, Liquebase
+Spring Boot Web, Spring Security, Jpa/Hibernate, Docker, Liquibase
